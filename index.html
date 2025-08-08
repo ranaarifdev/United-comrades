@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login - United Comrades</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="login-page">
+
+  <div class="brightness-container">
+    <label for="brightnessSlider">🔆 Brightness</label>
+    <input type="range" id="brightnessSlider" min="0" max="100" value="0">
+  </div>
+
+  <div class="overlay" id="overlay"></div>
+
+  <div class="login-box" id="loginBox">
+    <h1>United Comrades</h1>
+    <h2>Login</h2>
+    <input type="text" id="username" placeholder="Enter Username">
+    <input type="password" id="password" placeholder="Enter Password">
+    <button onclick="login()">Login</button>
+    <div id="error"></div>
+    <p class="footer">Developed by Rana Arif | 📞 03060830341 | ✉️ arifranaarif66@gmail.com</p>
+  </div>
+
+  <script>
+    const slider = document.getElementById('brightnessSlider');
+    const overlay = document.getElementById('overlay');
+    const loginBox = document.getElementById('loginBox');
+
+    slider.addEventListener('input', function () {
+      const value = parseInt(this.value);
+      const brightness = value / 100;
+      overlay.style.backgroundColor = `rgba(0, 0, 0, ${1 - brightness})`;
+
+      if (value > 50) {
+        loginBox.style.opacity = '1';
+        loginBox.style.pointerEvents = 'auto';
+      } else {
+        loginBox.style.opacity = '0';
+        loginBox.style.pointerEvents = 'none';
+      }
+    });
+
+    function login() {
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+      const error = document.getElementById('error');
+
+      if (username === 'Arif123' && password === 'Arif123') {
+        error.style.color = 'green';
+        error.textContent = 'Login successful!';
+        setTimeout(() => {
+          window.location.href = 'dashboard.html';
+        }, 1000);
+      } else {
+        error.style.color = 'red';
+        error.textContent = 'Incorrect username or password';
+      }
+    }
+  </script>
+</body>
+</html>

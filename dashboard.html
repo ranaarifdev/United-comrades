@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>United Comrades - Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dashboard-body">
+    <header>
+        <h1>United Comrades</h1>
+        <p>Developed by Rana Arif | 📞 03060830341 | ✉️ arifranaarif66@gmail.com</p>
+    </header>
+
+    <section class="gallery">
+        <script>
+            for (let i = 1; i <= 80; i++) {
+                document.write(`<img src="images/Rana${i}.jpg" alt="Rana${i}" loading="lazy" onclick="openPreview('images/Rana${i}.jpg')">`);
+            }
+        </script>
+    </section>
+
+    <!-- Image Preview Modal -->
+    <div id="previewModal" class="modal" onclick="closePreview()">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="previewImage">
+    </div>
+
+    <script>
+        function openPreview(src) {
+            document.getElementById("previewModal").style.display = "block";
+            document.getElementById("previewImage").src = src;
+        }
+        function closePreview() {
+            document.getElementById("previewModal").style.display = "none";
+        }
+    </script>
+</body>
+</html>
