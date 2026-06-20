@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>United Comrades - Gallery</title>
+  <meta name="description" content="A premium gallery for United Comrades.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-content">
+      <h1 class="title">United Comrades</h1>
+      <p class="subtitle">A Journey Captured in Moments</p>
+      <button class="scroll-down" onclick="scrollToGallery()">Explore Gallery</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="gallery" class="gallery-section">
+      <!-- Gallery items will be injected here via JS -->
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <p>Developed by Rana Arif</p>
+      <div class="contact-info">
+        <span>📞 03060830941</span> | 
+        <span>✉️ arifranaarif66@gmail.com</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Image/Video Preview Modal -->
+  <div id="previewModal" class="modal" onclick="if(event.target === this || event.target.className === 'close') closePreview()">
+    <span class="close" onclick="closePreview()">&times;</span>
+    <div class="modal-content-wrapper">
+      <img id="previewImage" class="modal-content" style="display: none;">
+      <video id="previewVideo" class="modal-content" controls autoplay style="display: none;"></video>
+    </div>
+  </div>
+
+  <script>
+    function scrollToGallery() {
+      document.getElementById('gallery').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    const galleryContainer = document.getElementById('gallery');
+    
+    // Inject Images (1 to 73)
+    for (let i = 1; i <= 73; i++) {
+      const imgPath = `images/Rana${i}.jpg`;
+      const wrapper = document.createElement('div');
+      wrapper.className = 'gallery-item fade-in';
+      wrapper.innerHTML = `<img src="${imgPath}" alt="Rana ${i}" loading="lazy" onclick="openPreview('${imgPath}', 'image')">`;
+      galleryContainer.appendChild(wrapper);
+    }
+
+    // Inject Video (Rana74)
+    const videoPath = 'images/Rana74.mp4';
+    const videoWrapper = document.createElement('div');
+    videoWrapper.className = 'gallery-item fade-in video-item';
+    videoWrapper.innerHTML = `
+      <div class="video-thumbnail" onclick="openPreview('${videoPath}', 'video')">
+        <video src="${videoPath}" muted loop onmouseover="this.play()" onmouseout="this.pause()"></video>
+        <div class="play-icon">▶</div>
+      </div>
+    `;
+    galleryContainer.appendChild(videoWrapper);
+
+    // Modal Logic
+    const modal = document.getElementById('previewModal');
+    const previewImage = document.getElementById('previewImage');
+    const previewVideo = document.getElementById('previewVideo');
+
+    function openPreview(src, type) {
+      modal.classList.add('show');
+      document.body.style.overflow = 'hidden'; // Prevent scrolling
+      
+      if (type === 'image') {
+        previewImage.src = src;
+        previewImage.style.display = 'block';
+        previewVideo.style.display = 'none';
+        previewVideo.pause();
+      } else if (type === 'video') {
+        previewVideo.src = src;
+        previewVideo.style.display = 'block';
+        previewImage.style.display = 'none';
+        previewVideo.play();
+      }
+    }
+
+    function closePreview() {
+      modal.classList.remove('show');
+      document.body.style.overflow = '';
+      setTimeout(() => {
+        previewImage.src = '';
+        previewVideo.pause();
+        previewVideo.src = '';
+      }, 400); // match transition duration
+    }
+
+    // Add staggered fade-in effect on load
+    document.addEventListener("DOMContentLoaded", () => {
+      const items = document.querySelectorAll('.fade-in');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+
+      items.forEach(item => observer.observe(item));
+    });
+  </script>
+</body>
+</html>
