@@ -20,7 +20,7 @@
   </header>
 
   <main>
-    <section id="gallery" class="gallery-section">
+    <section id="gallery" class="gallery-section" aria-label="Photo and video gallery">
       <!-- Gallery items will be injected here via JS -->
     </section>
   </main>
@@ -36,11 +36,11 @@
   </footer>
 
   <!-- Image/Video Preview Modal -->
-  <div id="previewModal" class="modal" onclick="if(event.target === this || event.target.className === 'close') closePreview()">
-    <span class="close" onclick="closePreview()">&times;</span>
+  <div id="previewModal" class="modal" role="dialog" aria-modal="true" aria-label="Media preview" onclick="if(event.target === this || event.target.className === 'close') closePreview()">
+    <span class="close" onclick="closePreview()" aria-label="Close preview">&times;</span>
     <div class="modal-content-wrapper">
-      <img id="previewImage" class="modal-content" style="display: none;">
-      <video id="previewVideo" class="modal-content" controls autoplay style="display: none;"></video>
+      <img id="previewImage" class="modal-content" alt="Gallery preview" style="display: none;">
+      <video id="previewVideo" class="modal-content" controls style="display: none;"></video>
     </div>
   </div>
 
@@ -66,7 +66,7 @@
     videoWrapper.className = 'gallery-item fade-in video-item';
     videoWrapper.innerHTML = `
       <div class="video-thumbnail" onclick="openPreview('${videoPath}', 'video')">
-        <video src="${videoPath}" muted loop onmouseover="this.play()" onmouseout="this.pause()"></video>
+        <video src="${videoPath}" muted loop playsinline onmouseover="this.play()" onmouseout="this.pause()"></video>
         <div class="play-icon">▶</div>
       </div>
     `;
@@ -79,7 +79,7 @@
 
     function openPreview(src, type) {
       modal.classList.add('show');
-      document.body.style.overflow = 'hidden'; // Prevent scrolling
+      document.body.style.overflow = 'hidden';
       
       if (type === 'image') {
         previewImage.src = src;
@@ -90,25 +90,35 @@
         previewVideo.src = src;
         previewVideo.style.display = 'block';
         previewImage.style.display = 'none';
-        previewVideo.play();
+        previewVideo.play().catch(function() {
+          // Autoplay was prevented by the browser, user can click play manually
+        });
       }
     }
 
     function closePreview() {
       modal.classList.remove('show');
       document.body.style.overflow = '';
-      setTimeout(() => {
+      setTimeout(function() {
         previewImage.src = '';
         previewVideo.pause();
-        previewVideo.src = '';
-      }, 400); // match transition duration
+        previewVideo.removeAttribute('src');
+        previewVideo.load();
+      }, 400);
     }
 
-    // Add staggered fade-in effect on load
-    document.addEventListener("DOMContentLoaded", () => {
+    // Close modal on Escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && modal.classList.contains('show')) {
+        closePreview();
+      }
+    });
+
+    // Staggered fade-in with IntersectionObserver
+    (function() {
       const items = document.querySelectorAll('.fade-in');
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
+      const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
           if (entry.isIntersecting) {
             entry.target.classList.add('visible');
             observer.unobserve(entry.target);
@@ -116,8 +126,8 @@
         });
       }, { threshold: 0.1 });
 
-      items.forEach(item => observer.observe(item));
-    });
+      items.forEach(function(item) { observer.observe(item); });
+    })();
   </script>
 </body>
 </html>
