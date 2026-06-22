@@ -3,41 +3,83 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>United Comrades - Gallery</title>
-  <meta name="description" content="A premium gallery for United Comrades.">
+  <title>United Comrades — Our Gallery</title>
+  <meta name="description" content="United Comrades — a premium photo and video gallery celebrating friendship and memories.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="hero">
+
+  <!-- Floating Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-logo">UC</div>
+    <ul class="nav-links">
+      <li><a href="#hero-section">Home</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#footer">Contact</a></li>
+    </ul>
+    <div class="nav-badge" id="photoCount">73 Photos</div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero" id="hero-section">
+    <canvas id="particleCanvas"></canvas>
+    <div class="hero-overlay"></div>
     <div class="hero-content">
-      <h1 class="title">United Comrades</h1>
-      <p class="subtitle">A Journey Captured in Moments</p>
-      <button class="scroll-down" onclick="scrollToGallery()">Explore Gallery</button>
+      <span class="hero-tag">EST. 2024</span>
+      <h1 class="title">United<br>Comrades</h1>
+      <p class="subtitle">Brotherhood. Memories. Forever.</p>
+      <div class="hero-buttons">
+        <button class="btn-primary" onclick="scrollToGallery()">
+          <span>Explore Gallery</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
+        </button>
+      </div>
+      <div class="scroll-indicator">
+        <div class="mouse">
+          <div class="wheel"></div>
+        </div>
+        <span>Scroll Down</span>
+      </div>
     </div>
   </header>
 
+  <!-- Gallery Section -->
   <main>
+    <section class="gallery-header">
+      <h2 class="section-title">Our Memories</h2>
+      <p class="section-subtitle">Every picture tells a story</p>
+      <div class="divider"></div>
+    </section>
     <section id="gallery" class="gallery-section" aria-label="Photo and video gallery">
-      <!-- Gallery items will be injected here via JS -->
+      <!-- Injected via JS -->
     </section>
   </main>
 
-  <footer class="footer">
+  <!-- Footer -->
+  <footer class="footer" id="footer">
+    <div class="footer-glow"></div>
     <div class="footer-content">
-      <p>Developed by Rana Arif</p>
+      <h3 class="footer-logo">United Comrades</h3>
+      <p class="footer-tagline">A Journey Captured in Moments</p>
+      <div class="footer-divider"></div>
       <div class="contact-info">
-        <span>📞 03060830941</span> | 
-        <span>✉️ arifranaarif66@gmail.com</span>
+        <a href="tel:03060830941" class="contact-link">📞 03060830941</a>
+        <a href="mailto:arifranaarif66@gmail.com" class="contact-link">✉️ arifranaarif66@gmail.com</a>
       </div>
+      <p class="footer-credit">Developed with ❤️ by Rana Arif</p>
     </div>
   </footer>
 
   <!-- Image/Video Preview Modal -->
-  <div id="previewModal" class="modal" role="dialog" aria-modal="true" aria-label="Media preview" onclick="if(event.target === this || event.target.className === 'close') closePreview()">
+  <div id="previewModal" class="modal" role="dialog" aria-modal="true" aria-label="Media preview">
+    <div class="modal-backdrop" onclick="closePreview()"></div>
+    <button class="modal-nav modal-prev" onclick="navigatePreview(-1)" aria-label="Previous">&#10094;</button>
+    <button class="modal-nav modal-next" onclick="navigatePreview(1)" aria-label="Next">&#10095;</button>
     <span class="close" onclick="closePreview()" aria-label="Close preview">&times;</span>
+    <div class="modal-counter" id="modalCounter"></div>
     <div class="modal-content-wrapper">
       <img id="previewImage" class="modal-content" alt="Gallery preview" style="display: none;">
       <video id="previewVideo" class="modal-content" controls style="display: none;"></video>
@@ -45,55 +87,82 @@
   </div>
 
   <script>
+    // Smooth scroll
     function scrollToGallery() {
       document.getElementById('gallery').scrollIntoView({ behavior: 'smooth' });
     }
 
-    const galleryContainer = document.getElementById('gallery');
-    
-    // Inject Images (1 to 73)
-    for (let i = 1; i <= 73; i++) {
-      const imgPath = `images/Rana${i}.jpg`;
-      const wrapper = document.createElement('div');
-      wrapper.className = 'gallery-item fade-in';
-      wrapper.innerHTML = `<img src="${imgPath}" alt="Rana ${i}" loading="lazy" onclick="openPreview('${imgPath}', 'image')">`;
-      galleryContainer.appendChild(wrapper);
-    }
+    // Sticky Navbar on scroll
+    var navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 100) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
 
-    // Inject Video (Rana74)
-    const videoPath = 'images/Rana74.mp4';
-    const videoWrapper = document.createElement('div');
-    videoWrapper.className = 'gallery-item fade-in video-item';
-    videoWrapper.innerHTML = `
-      <div class="video-thumbnail" onclick="openPreview('${videoPath}', 'video')">
-        <video src="${videoPath}" muted loop playsinline onmouseover="this.play()" onmouseout="this.pause()"></video>
-        <div class="play-icon">▶</div>
-      </div>
-    `;
-    galleryContainer.appendChild(videoWrapper);
+    // Gallery Data
+    var mediaItems = [];
+    for (var i = 1; i <= 73; i++) {
+      mediaItems.push({ src: 'images/Rana' + i + '.jpg', type: 'image' });
+    }
+    mediaItems.push({ src: 'images/Rana74.mp4', type: 'video' });
+
+    var currentIndex = 0;
+    var galleryContainer = document.getElementById('gallery');
+
+    // Inject gallery items
+    mediaItems.forEach(function(item, index) {
+      var wrapper = document.createElement('div');
+      wrapper.className = 'gallery-item fade-in';
+
+      if (item.type === 'image') {
+        wrapper.innerHTML = '<img src="' + item.src + '" alt="Memory ' + (index + 1) + '" loading="lazy" onclick="openPreview(' + index + ')">';
+      } else {
+        wrapper.classList.add('video-item');
+        wrapper.innerHTML =
+          '<div class="video-thumbnail" onclick="openPreview(' + index + ')">' +
+            '<video src="' + item.src + '" muted loop playsinline onmouseover="this.play()" onmouseout="this.pause()"></video>' +
+            '<div class="play-icon"><svg width="50" height="50" viewBox="0 0 24 24" fill="white"><polygon points="5,3 19,12 5,21"/></svg></div>' +
+          '</div>';
+      }
+      galleryContainer.appendChild(wrapper);
+    });
 
     // Modal Logic
-    const modal = document.getElementById('previewModal');
-    const previewImage = document.getElementById('previewImage');
-    const previewVideo = document.getElementById('previewVideo');
+    var modal = document.getElementById('previewModal');
+    var previewImage = document.getElementById('previewImage');
+    var previewVideo = document.getElementById('previewVideo');
+    var modalCounter = document.getElementById('modalCounter');
 
-    function openPreview(src, type) {
+    function openPreview(index) {
+      currentIndex = index;
+      showMedia(currentIndex);
       modal.classList.add('show');
       document.body.style.overflow = 'hidden';
-      
-      if (type === 'image') {
-        previewImage.src = src;
+    }
+
+    function showMedia(index) {
+      var item = mediaItems[index];
+      modalCounter.textContent = (index + 1) + ' / ' + mediaItems.length;
+
+      if (item.type === 'image') {
+        previewImage.src = item.src;
         previewImage.style.display = 'block';
         previewVideo.style.display = 'none';
         previewVideo.pause();
-      } else if (type === 'video') {
-        previewVideo.src = src;
+      } else {
+        previewVideo.src = item.src;
         previewVideo.style.display = 'block';
         previewImage.style.display = 'none';
-        previewVideo.play().catch(function() {
-          // Autoplay was prevented by the browser, user can click play manually
-        });
+        previewVideo.play().catch(function() {});
       }
+    }
+
+    function navigatePreview(direction) {
+      currentIndex = (currentIndex + direction + mediaItems.length) % mediaItems.length;
+      showMedia(currentIndex);
     }
 
     function closePreview() {
@@ -107,26 +176,88 @@
       }, 400);
     }
 
-    // Close modal on Escape key
+    // Keyboard Navigation
     document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape' && modal.classList.contains('show')) {
-        closePreview();
-      }
+      if (!modal.classList.contains('show')) return;
+      if (e.key === 'Escape') closePreview();
+      if (e.key === 'ArrowLeft') navigatePreview(-1);
+      if (e.key === 'ArrowRight') navigatePreview(1);
     });
 
-    // Staggered fade-in with IntersectionObserver
+    // Intersection Observer for fade-in
     (function() {
-      const items = document.querySelectorAll('.fade-in');
-      const observer = new IntersectionObserver(function(entries) {
+      var items = document.querySelectorAll('.fade-in');
+      var observer = new IntersectionObserver(function(entries) {
         entries.forEach(function(entry) {
           if (entry.isIntersecting) {
             entry.target.classList.add('visible');
             observer.unobserve(entry.target);
           }
         });
-      }, { threshold: 0.1 });
-
+      }, { threshold: 0.05 });
       items.forEach(function(item) { observer.observe(item); });
+    })();
+
+    // Particle Canvas Animation
+    (function() {
+      var canvas = document.getElementById('particleCanvas');
+      var ctx = canvas.getContext('2d');
+      var particles = [];
+      var particleCount = 60;
+
+      function resize() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+      }
+      resize();
+      window.addEventListener('resize', resize);
+
+      function Particle() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.vx = (Math.random() - 0.5) * 0.5;
+        this.vy = (Math.random() - 0.5) * 0.5;
+        this.radius = Math.random() * 2 + 0.5;
+        this.opacity = Math.random() * 0.5 + 0.1;
+      }
+
+      for (var i = 0; i < particleCount; i++) {
+        particles.push(new Particle());
+      }
+
+      function animate() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        particles.forEach(function(p) {
+          p.x += p.vx;
+          p.y += p.vy;
+          if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
+          if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+          ctx.fillStyle = 'rgba(212, 175, 55, ' + p.opacity + ')';
+          ctx.fill();
+        });
+
+        // Draw connections
+        for (var a = 0; a < particles.length; a++) {
+          for (var b = a + 1; b < particles.length; b++) {
+            var dx = particles[a].x - particles[b].x;
+            var dy = particles[a].y - particles[b].y;
+            var dist = Math.sqrt(dx * dx + dy * dy);
+            if (dist < 120) {
+              ctx.beginPath();
+              ctx.strokeStyle = 'rgba(212, 175, 55, ' + (0.1 * (1 - dist / 120)) + ')';
+              ctx.lineWidth = 0.5;
+              ctx.moveTo(particles[a].x, particles[a].y);
+              ctx.lineTo(particles[b].x, particles[b].y);
+              ctx.stroke();
+            }
+          }
+        }
+        requestAnimationFrame(animate);
+      }
+      animate();
     })();
   </script>
 </body>
