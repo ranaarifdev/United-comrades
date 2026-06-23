@@ -12,55 +12,55 @@ const members = [
     name: "Aurangzaib",
     role: "Leader",
     description: "Developer at a company in Islamabad. Leads United Comrades with dedication and vision, guiding the brotherhood towards professional and academic excellence.",
-    images: ["aurangzaib1.jpg", "aurangzaib2.jpg", "Aurangzaib.jpg", "Auranzaib.jpg", "Aurangzaib4.jpg.jpeg", "Aurangzaib5.jpg.jpeg"]
+    images: ["Aurangzaib1.jpg", "Aurangzaib2.jpg", "Aurangzaib4.jpg", "Aurangzaib5.jpg"]
   },
   {
     name: "Hanan Haider",
     role: "Member",
     description: "Cyber Security Student at Emerson University Multan. Passionate about ethical hacking, network analysis, and securing digital infrastructure.",
-    images: ["hanan1.jpg", "hanan2.jpg"]
+    images: ["Hanan1.jpeg"]
   },
   {
     name: "Muhammad Basit",
     role: "Additional Leader",
     description: "Accountant at Aqil Mobile Shop. Manages the administrative and organizational operations of United Comrades alongside his studies.",
-    images: ["basit1.jpg", "basit2.jpg", "Basit.jpg", "Basit1.jpg", "Basit2.jpg", "Basit3.jpg"]
+    images: ["Basit1.jpg", "Basit2.jpg", "Basit3.jpg", "Basit4.jpg"]
   },
   {
     name: "Faizan Ali Chohan",
     role: "Member",
     description: "Cyber Security Student. Enthusiastic learner of penetration testing, Linux systems administration, and web security safeguards.",
-    images: ["faizan1.jpg", "faizan2.jpg"]
+    images: ["Faizan1.jpeg"]
   },
   {
     name: "Muhammad Arif",
-    role: "Website Developer & Networking Expert",
-    description: "Cyber Security Student at Emerson University Multan. Highly skilled web designer, backend developer, and network configurations specialist.",
-    images: ["arif1.jpg", "arif2.jpg", "Arif.jpg", "Arif2.jpg", "Arif3.jpg", "Arif4.jpg", "Arif5.jpg", "Arif7.jpg"]
+    role: "Website Developer & Manager",
+    description: "Cyber Security Student at Emerson University Multan. Beginner web designer, backend developer, and network configurations specialist. Certified through Cisco Networking Academy, Security Blue Team, and Udemy in networking.",
+    images: ["Arif1.jpg", "Arif2.jpg", "Arif3.jpg", "Arif4.jpg", "Arif5.jpg", "Arif7.jpg"]
   },
   {
     name: "Muhammad Zahid",
     role: "Member",
     description: "Cyber Security Student. Dedicated to researching malware analysis, network protocols, and hardware security frameworks.",
-    images: ["zahid1.jpg", "zahid2.jpg", "Zahid.jpg", "Zahid3.jpg", "Zahid4.jpg", "Zahid5.jpg", "Zahid6.jpg", "Zahid7.jpg", "Zahid8.jpg"]
+    images: ["Zahid1.jpg", "Zahid2.jpg", "Zahid3.jpg", "Zahid4.jpg", "Zahid5.jpg", "Zahid6.jpg", "Zahid7.jpg"]
   },
   {
     name: "Javed Iqbal",
     role: "Member",
-    description: "Cyber Security Student. Eager to master cryptography, cloud security architecture, and system vulnerability assessment.",
-    images: ["javed1.jpg", "javed2.jpg"]
+    description: "Cyber Security Student, SHO of BMP Defenders of border areas, Saviour of Koh-e-Suleman 💖, and IT Incharge BMP.",
+    images: ["javed1.jpeg", "javed2.jpeg", "javed3.jpeg", "javed4.jpeg", "javed5.jpeg", "javed6.jpeg", "javed7.jpeg", "javed8.jpeg", "javed9.jpeg", "javed10.jpeg"]
   },
   {
     name: "Saad Habib",
     role: "Member",
     description: "Cyber Security Student. Interested in social engineering prevention, security audits, and risk assessment strategies.",
-    images: ["saad1.jpg", "saad2.jpg"]
+    images: ["Saad1.jpeg"]
   },
   {
     name: "Muhammad Mursaleen",
     role: "Member",
     description: "Cyber Security Student. Focused on defensive security operations, threat hunting, and incident response procedures.",
-    images: ["mursaleen1.jpg", "mursaleen2.jpg"]
+    images: ["Mursaleen1.jpeg"]
   }
 ];
 
@@ -70,7 +70,7 @@ const albumPhotos = [
   { src: 'Rana1.jpg', category: 'group', title: 'Comrades Assemble' },
   { src: 'Rana5.jpg', category: 'group', title: 'Stronger Together' },
   { src: 'Rana7.jpg', category: 'group', title: 'Brotherhood Moments' },
-  { src: 'Rana8.jpg.jpeg', category: 'group', title: 'Comrades Core' },
+  { src: 'Rana8.jpg', category: 'group', title: 'Comrades Core' },
   { src: 'Rana11.jpg', category: 'group', title: 'Emerson Courtyard' },
   { src: 'Rana12.jpg', category: 'group', title: 'Group Vibes' },
   { src: 'Rana14.jpg', category: 'group', title: 'Classmates' },
@@ -86,7 +86,7 @@ const albumPhotos = [
   { src: 'Rana25.jpg', category: 'group', title: 'Academic Life' },
   { src: 'Rana26.jpg', category: 'group', title: 'Cyber Security Unit' },
   { src: 'Rana29.jpg', category: 'group', title: 'Laughter & Memories' },
-  { src: 'Rana3.jpg.jpeg', category: 'group', title: 'Brotherhood Bonds' },
+  { src: 'Rana3.jpg', category: 'group', title: 'Brotherhood Bonds' },
   { src: 'Rana30.jpg', category: 'group', title: 'Group Photo' },
   { src: 'Rana34.jpg', category: 'group', title: 'Afternoon Group' },
   { src: 'Rana36.jpg', category: 'group', title: 'Sunny Day Gathering' },
@@ -105,7 +105,7 @@ const albumPhotos = [
   { src: 'Rana50.jpg', category: 'group', title: 'Gathering Photo' },
   { src: 'Rana51.jpg', category: 'group', title: 'Classmates Bond' },
   { src: 'Rana52.jpg', category: 'group', title: 'Group Pose' },
-  { src: 'Rana53.jpg', category: 'group', title: 'Comrades Day' },
+  { src: 'Rana4.jpg', category: 'group', title: 'Comrades Day' },
   { src: 'Rana54.jpg', category: 'group', title: 'Campus Steps' },
   { src: 'Rana57.jpg', category: 'group', title: 'Lawn Portrait' },
 
@@ -126,34 +126,52 @@ const albumPhotos = [
   { src: 'Rana69.jpg', category: 'events', title: 'Computing Lab Event' },
 
   // Individual Members
-  { src: 'Arif.jpg', category: 'individual', title: 'Muhammad Arif' },
+  { src: 'Arif1.jpg', category: 'individual', title: 'Muhammad Arif' },
   { src: 'Arif2.jpg', category: 'individual', title: 'Muhammad Arif' },
   { src: 'Arif3.jpg', category: 'individual', title: 'Muhammad Arif' },
   { src: 'Arif4.jpg', category: 'individual', title: 'Muhammad Arif' },
   { src: 'Arif5.jpg', category: 'individual', title: 'Muhammad Arif' },
   { src: 'Arif7.jpg', category: 'individual', title: 'Muhammad Arif' },
-  { src: 'Aurangzaib.jpg', category: 'individual', title: 'Aurangzaib' },
-  { src: 'Auranzaib.jpg', category: 'individual', title: 'Aurangzaib' },
-  { src: 'Aurangzaib4.jpg.jpeg', category: 'individual', title: 'Aurangzaib' },
-  { src: 'Aurangzaib5.jpg.jpeg', category: 'individual', title: 'Aurangzaib' },
-  { src: 'Basit.jpg', category: 'individual', title: 'Muhammad Basit' },
+  { src: 'Aurangzaib1.jpg', category: 'individual', title: 'Aurangzaib' },
+  { src: 'Aurangzaib2.jpg', category: 'individual', title: 'Aurangzaib' },
+  { src: 'Aurangzaib4.jpg', category: 'individual', title: 'Aurangzaib' },
+  { src: 'Aurangzaib5.jpg', category: 'individual', title: 'Aurangzaib' },
   { src: 'Basit1.jpg', category: 'individual', title: 'Muhammad Basit' },
   { src: 'Basit2.jpg', category: 'individual', title: 'Muhammad Basit' },
   { src: 'Basit3.jpg', category: 'individual', title: 'Muhammad Basit' },
-  { src: 'Zahid.jpg', category: 'individual', title: 'Muhammad Zahid' },
+  { src: 'Basit4.jpg', category: 'individual', title: 'Muhammad Basit' },
+  { src: 'Zahid1.jpg', category: 'individual', title: 'Muhammad Zahid' },
+  { src: 'Zahid2.jpg', category: 'individual', title: 'Muhammad Zahid' },
   { src: 'Zahid3.jpg', category: 'individual', title: 'Muhammad Zahid' },
   { src: 'Zahid4.jpg', category: 'individual', title: 'Muhammad Zahid' },
   { src: 'Zahid5.jpg', category: 'individual', title: 'Muhammad Zahid' },
   { src: 'Zahid6.jpg', category: 'individual', title: 'Muhammad Zahid' },
   { src: 'Zahid7.jpg', category: 'individual', title: 'Muhammad Zahid' },
-  { src: 'Zahid8.jpg', category: 'individual', title: 'Muhammad Zahid' }
+  { src: 'Hanan1.jpeg', category: 'individual', title: 'Hanan Haider' },
+  { src: 'Faizan1.jpeg', category: 'individual', title: 'Faizan Ali Chohan' },
+  { src: 'Saad1.jpeg', category: 'individual', title: 'Saad Habib' },
+  { src: 'Mursaleen1.jpeg', category: 'individual', title: 'Muhammad Mursaleen' },
+  { src: 'javed1.jpeg', category: 'individual', title: 'Javed Iqbal' },
+  { src: 'javed2.jpeg', category: 'individual', title: 'Javed Iqbal' },
+  { src: 'javed3.jpeg', category: 'individual', title: 'Javed Iqbal' },
+  { src: 'javed4.jpeg', category: 'individual', title: 'Javed Iqbal' },
+  { src: 'javed5.jpeg', category: 'individual', title: 'Javed Iqbal' },
+  { src: 'javed6.jpeg', category: 'individual', title: 'Javed Iqbal' },
+  { src: 'javed7.jpeg', category: 'individual', title: 'Javed Iqbal' },
+  { src: 'javed8.jpeg', category: 'individual', title: 'Javed Iqbal' },
+  { src: 'javed9.jpeg', category: 'individual', title: 'Javed Iqbal' },
+  { src: 'javed10.jpeg', category: 'individual', title: 'Javed Iqbal' }
 ];
+
+const PROFILE_PLACEHOLDER = `data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMWExYTFhIi8+PGNpcmNsZSBjeD0iNTAiIGN5PSI0MCIgcj0iMjAiIGZpbGw9IiMzYTNhM2EiLz48cGF0aCBkPSJNMjAgOTAgQyAyMCA3MCwgMzUgNjAsIDUwIDYwIEMgNjUgNjAsIDgwIDcwLCA4MCA5MCBaIiBmaWxsPSIjM2EzYTNhIi8+PC9zdmc+`;
+const PHOTO_PLACEHOLDER = `data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMWExYTFhIi8+PHJlY3QgeD0iMzAiIHk9IjMwIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHJ4PSI1IiBmaWxsPSIjM2EzYTNhIi8+PGNpcmNsZSBjeD0iNDUiIGN5PSI0NSIgcj0iNSIgZmlsbD0iIzFhMWExYSIvPjxwYXRoIGQ9Ik0zNSA2NSBMNDUgNTUgTDU1IDY1IEw2NSA1NSBMNzAgNjUiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzFhMWExYSIgc3Ryb2tlLXdpZHRoPSIzIi8+PC9zdmc+`;
 
 /**
  * 2. IMAGE UTILITIES (Error Safe & Path Prepending)
  */
 function resolveImagePath(path) {
-  if (!path) return 'images/Profile.jpg';
+  if (!path) return PHOTO_PLACEHOLDER;
+  if (path.startsWith('data:image/')) return path;
   // If it's already an absolute URL or starts with images/, keep it
   if (path.startsWith('http') || path.startsWith('images/') || path.startsWith('./')) {
     return path;
@@ -164,7 +182,7 @@ function resolveImagePath(path) {
 
 /**
  * Helper to handle avatar loading. Attempts to find a valid avatar image.
- * If the primary fails, falls back to the default Profile.jpg.
+ * If the primary fails, falls back to the default PROFILE_PLACEHOLDER.
  */
 function setupAvatarFallback(imgElement, imageList) {
   let attemptIdx = 0;
@@ -174,7 +192,7 @@ function setupAvatarFallback(imgElement, imageList) {
     if (imageList && attemptIdx < imageList.length) {
       imgElement.src = resolveImagePath(imageList[attemptIdx]);
     } else {
-      imgElement.src = 'images/Profile.jpg';
+      imgElement.src = PROFILE_PLACEHOLDER;
       imgElement.onerror = null; // Prevent infinite loop
     }
   };
@@ -183,7 +201,7 @@ function setupAvatarFallback(imgElement, imageList) {
   if (imageList && imageList.length > 0) {
     imgElement.src = resolveImagePath(imageList[0]);
   } else {
-    imgElement.src = 'images/Profile.jpg';
+    imgElement.src = PROFILE_PLACEHOLDER;
   }
 }
 
@@ -205,7 +223,7 @@ function renderMemberCards() {
     card.onkeypress = (e) => { if (e.key === 'Enter') openMemberModal(index); };
     
     // Choose primary avatar photo
-    const avatarSrc = member.images && member.images.length > 0 ? resolveImagePath(member.images[0]) : 'images/Profile.jpg';
+    const avatarSrc = member.images && member.images.length > 0 ? resolveImagePath(member.images[0]) : PROFILE_PLACEHOLDER;
     
     card.innerHTML = `
       <div class="member-card-img-wrap">
@@ -276,7 +294,7 @@ function renderMemberSlider() {
   dotsContainer.innerHTML = '';
   
   if (currentMemberImages.length === 0) {
-    sliderImg.src = 'images/Profile.jpg';
+    sliderImg.src = PHOTO_PLACEHOLDER;
     sliderImg.onerror = null;
     document.querySelector('.member-slider-nav-btns').style.display = 'none';
     return;
@@ -310,12 +328,12 @@ function updateSliderImage() {
   
   sliderImg.onerror = function() {
     fallbackAttempt++;
-    // If the image path doesn't work, try other images in their array, else use Profile.jpg
+    // If the image path doesn't work, try other images in their array, else use PHOTO_PLACEHOLDER
     if (fallbackAttempt < currentMemberImages.length) {
       const nextIdx = (currentMemberSliderIndex + fallbackAttempt) % currentMemberImages.length;
       sliderImg.src = resolveImagePath(currentMemberImages[nextIdx]);
     } else {
-      sliderImg.src = 'images/Profile.jpg';
+      sliderImg.src = PHOTO_PLACEHOLDER;
       sliderImg.onerror = null;
     }
   };
@@ -371,7 +389,7 @@ function renderMemberThumbnails() {
     
     // Thumbnail fallback to Profile
     thumbImg.onerror = function() {
-      thumbImg.src = 'images/Profile.jpg';
+      thumbImg.src = PHOTO_PLACEHOLDER;
       thumbImg.onerror = null;
     };
     
@@ -420,7 +438,7 @@ function renderGroupAlbum(filterCategory = 'all') {
     
     const img = item.querySelector('.gallery-img');
     img.onerror = function() {
-      img.src = 'images/Profile.jpg';
+      img.src = PHOTO_PLACEHOLDER;
       img.onerror = null;
     };
     
@@ -502,7 +520,7 @@ function showPreviewItem() {
       previewImage.src = src;
       previewImage.style.display = 'block';
       previewImage.onerror = function() {
-        previewImage.src = 'images/Profile.jpg';
+        previewImage.src = PHOTO_PLACEHOLDER;
         previewImage.onerror = null;
       };
     }
@@ -530,7 +548,7 @@ function closePreview() {
   document.body.style.overflow = isMemberModalOpen ? 'hidden' : '';
   
   setTimeout(() => {
-    if (previewImage) previewImage.src = '';
+    if (previewImage) previewImage.src = PHOTO_PLACEHOLDER;
     if (previewVideo) {
       previewVideo.pause();
       previewVideo.removeAttribute('src');
