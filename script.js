@@ -1,7 +1,6 @@
 /* ==========================================================================
    United Comrades — Premium Group Website JavaScript
    ========================================================================== */
-
 /**
  * 1. DATA-DRIVEN ARCHITECTURE
  * Edit these arrays to add/update members and photos dynamically.
