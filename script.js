@@ -75,7 +75,7 @@ const members = [
   {
     name: "Faizan Ali Chohan",
     role: "Executive Coordinator",
-    description: "Cyber Security Student and Digital Skills Explorer 🌐. Passionate about penetration testing, Linux system administration, and web security. Also manages administrative and organizational functions at United Comrades.",
+    description: "Cyber Security Student | SEO Enthusiast | Digital Skills Explorer 🌐. Managing administrative and organizational functions at United Comrades.",
     belongsTo: "Muzaffargarh",
     images: ["Faizan1.jpeg", "Faizan2.jpeg"]
   },
