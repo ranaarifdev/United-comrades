@@ -74,7 +74,7 @@ const members = [
   },
   {
     name: "Faizan Ali Chohan",
-    role: "Member",
+    role: "Executive Coordinator",
     description: "Cyber Security Student and Digital Skills Explorer 🌐. Passionate about penetration testing, Linux system administration, and web security. Also manages administrative and organizational functions at United Comrades.",
     belongsTo: "Muzaffargarh",
     images: ["Faizan1.jpeg", "Faizan2.jpeg"]
@@ -92,7 +92,7 @@ const members = [
   },
   {
     name: "Muhammad Zahid",
-    role: "Member",
+    role: "Accountant",
     description: "Cyber Security Student. Dedicated to researching malware analysis, network protocols, and hardware security frameworks. Learning Web development.",
     belongsTo: "Lahore",
     images: [
@@ -102,7 +102,7 @@ const members = [
   },
   {
     name: "Javed Iqbal",
-    role: "Member",
+    role: "Analysts",
     description: "Cyber Security Student, SHO of BMP Defenders of border areas, Saviour of Koh-e-Suleman 💖, and IT Incharge BMP.",
     belongsTo: "Rajan Pur",
     images: [
@@ -113,14 +113,14 @@ const members = [
   },
   {
     name: "Saad Habib",
-    role: "Member",
+    role: "Social Media Coordinator",
     description: "Cyber Security Student. Interested in social engineering prevention, security audits, and risk assessment strategies.",
     belongsTo: "Multan",
     images: ["Saad1.jpeg", "Saad2.jpeg", "Saad3.jpeg", "Saad4.jpeg", "Saad5.jpeg"]
   },
   {
     name: "Muhammad Mursaleen",
-    role: "Member",
+    role: "Social Media Coordinator",
     description: "Cyber Security Student. Focused on defensive security operations, threat hunting, and incident response procedures. Media Coordinator in United Comrades.",
     belongsTo: "Shujabad",
     images: ["Mursaleen1.jpeg", "Mursaleen2.jpeg"]
