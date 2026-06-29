@@ -527,6 +527,14 @@ body {
   color: var(--text-muted);
 }
 
+.member-card-city {
+  display: block;
+  margin-top: 4px;
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  opacity: 0.7;
+}
+
 /* ==========================================
    MEMBER PROFILE MODAL
    ========================================== */
@@ -652,10 +660,11 @@ body {
 .member-slider img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  background: #090909;
+  object-fit: cover;
+  object-position: center top;
+  background: #0d0d0d;
   display: block;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.4s ease;
 }
 
 .member-slider-nav-btns {
@@ -797,10 +806,11 @@ body {
 .member-gallery-item img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  background: #090909;
+  object-fit: cover;
+  object-position: center top;
+  background: #0d0d0d;
   display: block;
-  transition: transform 0.4s var(--ease);
+  transition: transform 0.4s var(--ease), opacity 0.4s ease;
 }
 
 .member-gallery-item:hover img {
@@ -881,15 +891,16 @@ body {
   margin: 0 auto;
   padding: 0 20px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   gap: 14px;
   grid-auto-rows: 240px;
   grid-auto-flow: dense;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-.gallery-item:nth-child(3n+1) { grid-row: span 2; }
-.gallery-item:nth-child(7n) { grid-column: span 2; }
-.gallery-item:nth-child(11n) { grid-column: span 2; grid-row: span 2; }
+.gallery-item:nth-child(5n+1) { grid-row: span 2; }
+.gallery-item:nth-child(8n)   { grid-column: span 2; }
+.gallery-item:nth-child(13n)  { grid-column: span 2; grid-row: span 2; }
 
 .gallery-item {
   position: relative;
@@ -922,10 +933,11 @@ body {
 .gallery-item img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  background: #090909;
+  object-fit: cover;
+  object-position: center top;
+  background: #0d0d0d;
   display: block;
-  transition: transform 0.5s var(--ease);
+  transition: transform 0.5s var(--ease), opacity 0.4s ease;
 }
 
 .gallery-item:hover {
@@ -972,13 +984,15 @@ body {
 }
 
 .modal-content {
-  max-width: 100%;
+  max-width: 90vw;
   max-height: 85vh;
+  width: auto;
+  height: auto;
   border-radius: 10px;
   box-shadow: 0 0 80px rgba(0, 0, 0, 0.6);
   object-fit: contain;
   transform: scale(0.92);
-  transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.4s ease;
 }
 
 .modal.show .modal-content { transform: scale(1); }
