@@ -6,7 +6,7 @@
  * ALL image filenames verified exactly against /images folder.
  * GitHub Pages = Linux = case-sensitive. Every name must match perfectly.
  *
- * Verified folder contents (166 files):
+ * Verified folder contents (176 files):
  *   Arif1.jpg  Arif2.jpg  Arif3.jpg  Arif4.jpg  Arif5.jpg  Arif6.jpeg
  *   Arif7.jpg  Arif8.jpeg Arif9.jpeg Arif10.jpeg Arif11.jpeg Arif12.jpeg
  *   Aurangzaib1.jpeg Aurangzaib2.jpg Aurangzaib4.jpg Aurangzaib5.jpg
@@ -16,7 +16,7 @@
  *   Basit5–40 all .jpeg
  *   Faizan1.jpeg  Faizan2.jpeg
  *   Hanan1.jpeg   Hanan2.jpeg
- *   Javed1–10 all .jpeg
+ *   Javed1–10 all .jpeg (capitalized Javed)
  *   Mursaleen1.jpeg  Mursaleen2.jpeg
  *   Rana1.jpg  Rana2.jpeg  Rana3.jpg  Rana4.jpg  Rana5.jpg  Rana6.jpg
  *   Rana7.jpg  Rana8.jpg  Rana9.jpg  Rana10.jpg Rana11.jpg Rana12.jpg
@@ -30,7 +30,9 @@
  *   Rana55.jpg  Rana56.jpeg Rana57.jpg  Rana58.jpg  Rana59.jpeg Rana60.jpeg
  *   Rana61.jpeg Rana62.jpg  Rana63.jpg  Rana64.jpeg Rana65.jpeg Rana66.jpg
  *   Rana67.jpg  Rana68.jpg  Rana69.jpeg Rana70.jpeg Rana71.jpeg Rana72.jpeg
- *   Rana73.jpg  Rana74.jpg  Rana75.jpeg Rana76.jpeg
+ *   Rana73.jpg  Rana74.jpg  Rana75.jpeg Rana76.jpeg Rana77.jpeg Rana78.jpeg
+ *   Rana79.jpeg Rana80.jpeg Rana81.jpeg Rana82.jpeg Rana83.jpeg Rana84.jpeg
+ *   Rana85.jpeg Rana86.jpeg
  *   Saad1–5 all .jpeg
  *   Zahid1.jpeg Zahid2–8 all .jpg
  */
@@ -106,9 +108,9 @@ const members = [
     description: "Cyber Security Student, SHO of BMP Defenders of border areas, Saviour of Koh-e-Suleman 💖, and IT Incharge BMP.",
     belongsTo: "Rajan Pur",
     images: [
-      "javed1.jpeg", "javed2.jpeg",  "javed3.jpeg",  "javed4.jpeg",
-      "javed5.jpeg", "javed6.jpeg",  "javed7.jpeg",  "javed8.jpeg",
-      "javed9.jpeg", "javed10.jpeg"
+      "Javed1.jpeg", "Javed2.jpeg",  "Javed3.jpeg",  "Javed4.jpeg",
+      "Javed5.jpeg", "Javed6.jpeg",  "Javed7.jpeg",  "Javed8.jpeg",
+      "Javed9.jpeg", "Javed10.jpeg"
     ]
   },
   {
@@ -213,6 +215,16 @@ const albumPhotos = [
   { src: 'Rana74.jpg',  category: 'events', title: 'Comrades Moment' },
   { src: 'Rana75.jpeg', category: 'events', title: 'Campus Memory' },
   { src: 'Rana76.jpeg', category: 'events', title: 'Brotherhood Day' },
+  { src: 'Rana77.jpeg', category: 'events', title: 'Comrades Spirit' },
+  { src: 'Rana78.jpeg', category: 'events', title: 'Friendship Forever' },
+  { src: 'Rana79.jpeg', category: 'events', title: 'United We Stand' },
+  { src: 'Rana80.jpeg', category: 'events', title: 'Comrades Legacy' },
+  { src: 'Rana81.jpeg', category: 'events', title: 'Brotherhood Vibes' },
+  { src: 'Rana82.jpeg', category: 'events', title: 'Together Always' },
+  { src: 'Rana83.jpeg', category: 'events', title: 'UC Memories' },
+  { src: 'Rana84.jpeg', category: 'events', title: 'Comrades Bond' },
+  { src: 'Rana85.jpeg', category: 'events', title: 'Campus Moments' },
+  { src: 'Rana86.jpeg', category: 'events', title: 'Brotherhood Forever' },
 
   // ── INDIVIDUAL MEMBERS ────────────────────────────────────────────────────
   // Muhammad Arif — 12 photos (Arif1-5.jpg, Arif6.jpeg, Arif7.jpg, Arif8-12.jpeg)
@@ -292,17 +304,17 @@ const albumPhotos = [
   { src: 'Zahid7.jpg',  category: 'individual', title: 'Muhammad Zahid' },
   { src: 'Zahid8.jpg',  category: 'individual', title: 'Muhammad Zahid' },
 
-  // Javed Iqbal — 10 photos (all .jpeg)
-  { src: 'javed1.jpeg',  category: 'individual', title: 'Javed Iqbal' },
-  { src: 'javed2.jpeg',  category: 'individual', title: 'Javed Iqbal' },
-  { src: 'javed3.jpeg',  category: 'individual', title: 'Javed Iqbal' },
-  { src: 'javed4.jpeg',  category: 'individual', title: 'Javed Iqbal' },
-  { src: 'javed5.jpeg',  category: 'individual', title: 'Javed Iqbal' },
-  { src: 'javed6.jpeg',  category: 'individual', title: 'Javed Iqbal' },
-  { src: 'javed7.jpeg',  category: 'individual', title: 'Javed Iqbal' },
-  { src: 'javed8.jpeg',  category: 'individual', title: 'Javed Iqbal' },
-  { src: 'javed9.jpeg',  category: 'individual', title: 'Javed Iqbal' },
-  { src: 'javed10.jpeg', category: 'individual', title: 'Javed Iqbal' },
+  // Javed Iqbal — 10 photos (all .jpeg, capitalized Javed)
+  { src: 'Javed1.jpeg',  category: 'individual', title: 'Javed Iqbal' },
+  { src: 'Javed2.jpeg',  category: 'individual', title: 'Javed Iqbal' },
+  { src: 'Javed3.jpeg',  category: 'individual', title: 'Javed Iqbal' },
+  { src: 'Javed4.jpeg',  category: 'individual', title: 'Javed Iqbal' },
+  { src: 'Javed5.jpeg',  category: 'individual', title: 'Javed Iqbal' },
+  { src: 'Javed6.jpeg',  category: 'individual', title: 'Javed Iqbal' },
+  { src: 'Javed7.jpeg',  category: 'individual', title: 'Javed Iqbal' },
+  { src: 'Javed8.jpeg',  category: 'individual', title: 'Javed Iqbal' },
+  { src: 'Javed9.jpeg',  category: 'individual', title: 'Javed Iqbal' },
+  { src: 'Javed10.jpeg', category: 'individual', title: 'Javed Iqbal' },
 
   // Saad Habib — 5 photos (all .jpeg)
   { src: 'Saad1.jpeg', category: 'individual', title: 'Saad Habib' },
@@ -450,6 +462,9 @@ function openMemberModal(index) {
 
   modal.classList.add('show');
   document.body.style.overflow = 'hidden';
+
+  // Push history state so back button closes modal instead of leaving site
+  history.pushState({ modal: 'member', memberIndex: index }, '');
 }
 
 function closeMemberModal() {
@@ -468,6 +483,8 @@ function renderMemberSlider() {
   if (currentMemberImages.length === 0) {
     sliderImg.src = generatePlaceholderSVG();
     sliderImg.onerror = null;
+    sliderImg.style.cursor = 'default';
+    sliderImg.onclick = null;
     const navBtns = document.querySelector('.member-slider-nav-btns');
     if (navBtns) navBtns.style.display = 'none';
     return;
@@ -475,6 +492,13 @@ function renderMemberSlider() {
 
   const navBtns = document.querySelector('.member-slider-nav-btns');
   if (navBtns) navBtns.style.display = currentMemberImages.length > 1 ? 'flex' : 'none';
+
+  // Click on main image opens full-screen preview lightbox
+  sliderImg.style.cursor = 'zoom-in';
+  sliderImg.onclick = () => {
+    const fullList = currentMemberImages.map(img => resolveImagePath(img));
+    openPreviewFromList(fullList, currentMemberSliderIndex);
+  };
 
   // Update image source with smart fallback
   updateSliderImage();
@@ -697,6 +721,9 @@ function openPreviewFromList(list, index) {
     previewModal.classList.add('show');
     document.body.style.overflow = 'hidden';
   }
+
+  // Push history state so back button closes preview instead of leaving site
+  history.pushState({ modal: 'preview' }, '');
 }
 
 function showPreviewItem() {
@@ -864,6 +891,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Initialize Particle Canvas
   initParticleCanvas();
+
+  // ── BACK BUTTON NAVIGATION ─────────────────────────────────────────────
+  // Handle browser back button to close modals instead of leaving the site
+  window.addEventListener('popstate', (e) => {
+    const state = e.state;
+
+    // If preview lightbox is open, close it first
+    if (previewModal && previewModal.classList.contains('show')) {
+      closePreview();
+      return;
+    }
+
+    // If member modal is open, close it
+    const memberModal = document.getElementById('memberModal');
+    if (memberModal && memberModal.classList.contains('show')) {
+      closeMemberModal();
+      return;
+    }
+  });
+
+  // Set initial history state so first back press triggers popstate
+  history.replaceState({ modal: null }, '');
 });
 
 // Close Mobile Nav Helper
