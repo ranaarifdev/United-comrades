@@ -106,9 +106,9 @@ const members = [
     description: "Cyber Security Student, SHO of BMP Defenders of border areas, Saviour of Koh-e-Suleman 💖, and IT Incharge BMP.",
     belongsTo: "Rajan Pur",
     images: [
-      "Javed1.jpeg",  "Javed2.jpeg",  "Javed3.jpeg",  "Javed4.jpeg",
-      "Javed5.jpeg",  "Javed6.jpeg",  "Javed7.jpeg",  "Javed8.jpeg",
-      "Javed9.jpeg",  "Javed10.jpeg"
+      "javed1.jpeg", "javed2.jpeg",  "javed3.jpeg",  "javed4.jpeg",
+      "javed5.jpeg", "javed6.jpeg",  "javed7.jpeg",  "javed8.jpeg",
+      "javed9.jpeg", "javed10.jpeg"
     ]
   },
   {
@@ -293,16 +293,16 @@ const albumPhotos = [
   { src: 'Zahid8.jpg',  category: 'individual', title: 'Muhammad Zahid' },
 
   // Javed Iqbal — 10 photos (all .jpeg)
-  { src: 'Javed1.jpeg',  category: 'individual', title: 'Javed Iqbal' },
-  { src: 'Javed2.jpeg',  category: 'individual', title: 'Javed Iqbal' },
-  { src: 'Javed3.jpeg',  category: 'individual', title: 'Javed Iqbal' },
-  { src: 'Javed4.jpeg',  category: 'individual', title: 'Javed Iqbal' },
-  { src: 'Javed5.jpeg',  category: 'individual', title: 'Javed Iqbal' },
-  { src: 'Javed6.jpeg',  category: 'individual', title: 'Javed Iqbal' },
-  { src: 'Javed7.jpeg',  category: 'individual', title: 'Javed Iqbal' },
-  { src: 'Javed8.jpeg',  category: 'individual', title: 'Javed Iqbal' },
-  { src: 'Javed9.jpeg',  category: 'individual', title: 'Javed Iqbal' },
-  { src: 'Javed10.jpeg', category: 'individual', title: 'Javed Iqbal' },
+  { src: 'javed1.jpeg',  category: 'individual', title: 'Javed Iqbal' },
+  { src: 'javed2.jpeg',  category: 'individual', title: 'Javed Iqbal' },
+  { src: 'javed3.jpeg',  category: 'individual', title: 'Javed Iqbal' },
+  { src: 'javed4.jpeg',  category: 'individual', title: 'Javed Iqbal' },
+  { src: 'javed5.jpeg',  category: 'individual', title: 'Javed Iqbal' },
+  { src: 'javed6.jpeg',  category: 'individual', title: 'Javed Iqbal' },
+  { src: 'javed7.jpeg',  category: 'individual', title: 'Javed Iqbal' },
+  { src: 'javed8.jpeg',  category: 'individual', title: 'Javed Iqbal' },
+  { src: 'javed9.jpeg',  category: 'individual', title: 'Javed Iqbal' },
+  { src: 'javed10.jpeg', category: 'individual', title: 'Javed Iqbal' },
 
   // Saad Habib — 5 photos (all .jpeg)
   { src: 'Saad1.jpeg', category: 'individual', title: 'Saad Habib' },
