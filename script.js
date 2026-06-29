@@ -3,7 +3,36 @@
    ========================================================================== */
 /**
  * 1. DATA-DRIVEN ARCHITECTURE
- * Edit these arrays to add/update members and photos dynamically.
+ * ALL image filenames verified exactly against /images folder.
+ * GitHub Pages = Linux = case-sensitive. Every name must match perfectly.
+ *
+ * Verified folder contents (166 files):
+ *   Arif1.jpg  Arif2.jpg  Arif3.jpg  Arif4.jpg  Arif5.jpg  Arif6.jpeg
+ *   Arif7.jpg  Arif8.jpeg Arif9.jpeg Arif10.jpeg Arif11.jpeg Arif12.jpeg
+ *   Aurangzaib1.jpeg Aurangzaib2.jpg Aurangzaib4.jpg Aurangzaib5.jpg
+ *   Aurangzaib6.jpg  Aurangzaib7.jpeg Aurangzaib8.jpeg Aurangzaib9.jpeg
+ *   Aurangzaib10.jpeg   (NO Aurangzaib3)
+ *   Basit1.jpg  Basit2.jpg  Basit3.jpg  Basit4.jpg
+ *   Basit5–40 all .jpeg
+ *   Faizan1.jpeg  Faizan2.jpeg
+ *   Hanan1.jpeg   Hanan2.jpeg
+ *   Javed1–10 all .jpeg
+ *   Mursaleen1.jpeg  Mursaleen2.jpeg
+ *   Rana1.jpg  Rana2.jpeg  Rana3.jpg  Rana4.jpg  Rana5.jpg  Rana6.jpg
+ *   Rana7.jpg  Rana8.jpg  Rana9.jpg  Rana10.jpg Rana11.jpg Rana12.jpg
+ *   Rana13.jpeg Rana14.jpg Rana15.jpg Rana16.jpg Rana17.jpg Rana18.jpg
+ *   Rana19.jpg  Rana20.jpg  Rana21.jpg  Rana22.jpg  Rana23.jpg  Rana24.jpg
+ *   Rana25.jpg  Rana26.jpg  Rana27.jpeg Rana28.jpeg Rana29.jpg  Rana30.jpg
+ *   Rana31.jpeg Rana32.jpg  Rana33.jpg  Rana34.jpg  Rana35.jpeg Rana36.jpg
+ *   Rana37.jpeg Rana38.jpg  Rana39.jpg  Rana40.jpg  Rana41.jpg  Rana42.jpeg
+ *   Rana43.jpg  Rana44.jpeg Rana45.jpg  Rana46.jpg  Rana47.jpg  Rana48.jpg
+ *   Rana49.jpg  Rana50.jpg  Rana51.jpeg Rana52.jpg  Rana53.jpeg Rana54.jpg
+ *   Rana55.jpg  Rana56.jpeg Rana57.jpg  Rana58.jpg  Rana59.jpeg Rana60.jpeg
+ *   Rana61.jpeg Rana62.jpg  Rana63.jpg  Rana64.jpeg Rana65.jpeg Rana66.jpg
+ *   Rana67.jpg  Rana68.jpg  Rana69.jpeg Rana70.jpeg Rana71.jpeg Rana72.jpeg
+ *   Rana73.jpg  Rana74.jpg  Rana75.jpeg Rana76.jpeg
+ *   Saad1–5 all .jpeg
+ *   Zahid1.jpeg Zahid2–8 all .jpg
  */
 
 const members = [
@@ -12,7 +41,11 @@ const members = [
     role: "Leader",
     description: "Developer at a company in Islamabad. Leads United Comrades with dedication and vision, guiding the brotherhood towards professional and academic excellence.",
     belongsTo: "DG Khan",
-    images: ["Aurangzaib1.jpeg", "Aurangzaib2.jpg", "Aurangzaib4.jpg", "Aurangzaib5.jpg", "Aurangzaib6.jpg", "Aurangzaib7.jpeg", "Aurangzaib8.jpeg", "Aurangzaib9.jpeg", "Aurangzaib10.jpeg"]
+    images: [
+      "Aurangzaib1.jpeg", "Aurangzaib2.jpg",  "Aurangzaib4.jpg",
+      "Aurangzaib5.jpg",  "Aurangzaib6.jpg",  "Aurangzaib7.jpeg",
+      "Aurangzaib8.jpeg", "Aurangzaib9.jpeg", "Aurangzaib10.jpeg"
+    ]
   },
   {
     name: "Hanan Haider",
@@ -27,10 +60,16 @@ const members = [
     description: "Senior Accountant at Aqil Mobile Shop. He manages the administrative and organizational operations of United Comrades while continuing his studies. Student of Cyber Security at Emerson University Multan. Passionate about ethical hacking, network analysis, and securing digital infrastructure.",
     belongsTo: "Ali Pur",
     images: [
-      "Basit1.jpg", "Basit2.jpg", "Basit3.jpg", "Basit4.jpg", "Basit5.jpeg",
-      "Basit6.jpeg", "Basit7.jpeg", "Basit8.jpeg", "Basit9.jpeg", "Basit10.jpeg",
-      "Basit11.jpeg", "Basit12.jpeg", "Basit13.jpeg", "Basit14.jpeg", "Basit15.jpeg",
-      "Basit16.jpeg", "Basit17.jpeg", "Basit18.jpeg", "Basit19.jpeg", "Basit20.jpeg"
+      "Basit1.jpg",   "Basit2.jpg",   "Basit3.jpg",   "Basit4.jpg",
+      "Basit5.jpeg",  "Basit6.jpeg",  "Basit7.jpeg",  "Basit8.jpeg",
+      "Basit9.jpeg",  "Basit10.jpeg", "Basit11.jpeg", "Basit12.jpeg",
+      "Basit13.jpeg", "Basit14.jpeg", "Basit15.jpeg", "Basit16.jpeg",
+      "Basit17.jpeg", "Basit18.jpeg", "Basit19.jpeg", "Basit20.jpeg",
+      "Basit21.jpeg", "Basit22.jpeg", "Basit23.jpeg", "Basit24.jpeg",
+      "Basit25.jpeg", "Basit26.jpeg", "Basit27.jpeg", "Basit28.jpeg",
+      "Basit29.jpeg", "Basit30.jpeg", "Basit31.jpeg", "Basit32.jpeg",
+      "Basit33.jpeg", "Basit34.jpeg", "Basit35.jpeg", "Basit36.jpeg",
+      "Basit37.jpeg", "Basit38.jpeg", "Basit39.jpeg", "Basit40.jpeg"
     ]
   },
   {
@@ -45,21 +84,32 @@ const members = [
     role: "Website Developer & Manager of United Comrades",
     description: "Cyber Security Student at Emerson University Multan. Beginner web designer, backend developer, and network configurations specialist. Certified through Cisco Networking Academy, Security Blue Team, and Udemy in networking.",
     belongsTo: "Shujabad",
-    images: ["Arif1.jpg", "Arif2.jpg", "Arif3.jpg", "Arif4.jpg", "Arif5.jpg", "Arif7.jpg", "Arif8.jpeg", "Arif9.jpeg", "Arif10.jpeg", "Arif11.jpeg", "Arif12.jpeg"]
+    images: [
+      "Arif1.jpg",   "Arif2.jpg",   "Arif3.jpg",   "Arif4.jpg",
+      "Arif5.jpg",   "Arif6.jpeg",  "Arif7.jpg",   "Arif8.jpeg",
+      "Arif9.jpeg",  "Arif10.jpeg", "Arif11.jpeg",  "Arif12.jpeg"
+    ]
   },
   {
     name: "Muhammad Zahid",
     role: "Member",
     description: "Cyber Security Student. Dedicated to researching malware analysis, network protocols, and hardware security frameworks. Learning Web development.",
     belongsTo: "Lahore",
-    images: ["Zahid1.jpeg", "Zahid2.jpg", "Zahid3.jpg", "Zahid4.jpg", "Zahid5.jpg", "Zahid6.jpg", "Zahid7.jpg", "Zahid8.jpg"]
+    images: [
+      "Zahid1.jpeg", "Zahid2.jpg", "Zahid3.jpg", "Zahid4.jpg",
+      "Zahid5.jpg",  "Zahid6.jpg", "Zahid7.jpg", "Zahid8.jpg"
+    ]
   },
   {
     name: "Javed Iqbal",
     role: "Member",
     description: "Cyber Security Student, SHO of BMP Defenders of border areas, Saviour of Koh-e-Suleman 💖, and IT Incharge BMP.",
     belongsTo: "Rajan Pur",
-    images: ["Javed1.jpeg", "Javed2.jpeg", "Javed3.jpeg", "Javed4.jpeg", "Javed5.jpeg", "Javed6.jpeg", "Javed7.jpeg", "Javed8.jpeg", "Javed9.jpeg", "Javed10.jpeg"]
+    images: [
+      "Javed1.jpeg",  "Javed2.jpeg",  "Javed3.jpeg",  "Javed4.jpeg",
+      "Javed5.jpeg",  "Javed6.jpeg",  "Javed7.jpeg",  "Javed8.jpeg",
+      "Javed9.jpeg",  "Javed10.jpeg"
+    ]
   },
   {
     name: "Saad Habib",
@@ -77,52 +127,58 @@ const members = [
   }
 ];
 
-// Group Album & Gallery Photos (Categorized for dynamic filtering)
-// All filenames verified against actual files in /images folder
+// ─────────────────────────────────────────────────────────────────────────────
+// Group Album & Gallery Photos
+// ALL filenames verified 1-to-1 against the /images folder (case-exact).
+// GitHub Pages runs on Linux → filenames ARE case-sensitive.
+// ─────────────────────────────────────────────────────────────────────────────
 const albumPhotos = [
-  // Group Photos
-  { src: 'Rana1.jpg',   category: 'group', title: 'Comrades Assemble' },
-  { src: 'Rana3.jpg',   category: 'group', title: 'Brotherhood Bonds' },
-  { src: 'Rana5.jpg',   category: 'group', title: 'Stronger Together' },
-  { src: 'Rana7.jpg',   category: 'group', title: 'Brotherhood Moments' },
-  { src: 'Rana8.jpg',   category: 'group', title: 'Comrades Core' },
-  { src: 'Rana11.jpg',  category: 'group', title: 'Emerson Courtyard' },
-  { src: 'Rana12.jpg',  category: 'group', title: 'Group Vibes' },
-  { src: 'Rana14.jpg',  category: 'group', title: 'Classmates' },
-  { src: 'Rana16.jpg',  category: 'group', title: 'Campus Stroll' },
-  { src: 'Rana17.jpg',  category: 'group', title: 'Comrades Gathering' },
-  { src: 'Rana18.jpg',  category: 'group', title: 'Afternoon Chat' },
-  { src: 'Rana19.jpg',  category: 'group', title: 'University Life' },
-  { src: 'Rana20.jpg',  category: 'group', title: 'Group Portrait' },
-  { src: 'Rana21.jpg',  category: 'group', title: 'Study Session Break' },
-  { src: 'Rana22.jpg',  category: 'group', title: 'Comrades Smile' },
-  { src: 'Rana23.jpg',  category: 'group', title: 'Outdoor Gathering' },
-  { src: 'Rana24.jpg',  category: 'group', title: 'Lawn Discussion' },
-  { src: 'Rana25.jpg',  category: 'group', title: 'Academic Life' },
-  { src: 'Rana26.jpg',  category: 'group', title: 'Cyber Security Unit' },
-  { src: 'Rana29.jpg',  category: 'group', title: 'Laughter & Memories' },
-  { src: 'Rana30.jpg',  category: 'group', title: 'Group Photo' },
-  { src: 'Rana34.jpg',  category: 'group', title: 'Afternoon Group' },
-  { src: 'Rana36.jpg',  category: 'group', title: 'Sunny Day Gathering' },
-  { src: 'Rana39.jpg',  category: 'group', title: 'Campus Walkway' },
-  { src: 'Rana40.jpg',  category: 'group', title: 'Group Memory' },
-  { src: 'Rana41.jpg',  category: 'group', title: 'Emerson Comrades' },
-  { src: 'Rana42.jpeg', category: 'group', title: 'Main Campus Gate' },
-  { src: 'Rana43.jpg',  category: 'group', title: 'Under the Tree' },
-  { src: 'Rana44.jpeg', category: 'group', title: 'Casual Talk' },
-  { src: 'Rana45.jpg',  category: 'group', title: 'University Friends' },
-  { src: 'Rana46.jpg',  category: 'group', title: 'Comrades Lineup' },
-  { src: 'Rana47.jpg',  category: 'group', title: 'Campus Lawn' },
-  { src: 'Rana48.jpg',  category: 'group', title: 'Cyber Group' },
-  { src: 'Rana49.jpg',  category: 'group', title: 'Shaded Bench' },
-  { src: 'Rana50.jpg',  category: 'group', title: 'Gathering Photo' },
-  { src: 'Rana51.jpeg', category: 'group', title: 'Classmates Bond' },
-  { src: 'Rana52.jpg',  category: 'group', title: 'Group Pose' },
-  { src: 'Rana53.jpeg', category: 'group', title: 'Comrades Day' },
-  { src: 'Rana54.jpg',  category: 'group', title: 'Campus Steps' },
-  { src: 'Rana57.jpg',  category: 'group', title: 'Lawn Portrait' },
 
-  // Events / Memories
+  // ── GROUP PHOTOS ──────────────────────────────────────────────────────────
+  { src: 'Rana1.jpg',   category: 'group', title: 'Comrades Assemble' },
+  { src: 'Rana2.jpeg',  category: 'group', title: 'Brotherhood Bonds' },
+  { src: 'Rana3.jpg',   category: 'group', title: 'Stronger Together' },
+  { src: 'Rana4.jpg',   category: 'group', title: 'Brotherhood Moments' },
+  { src: 'Rana5.jpg',   category: 'group', title: 'Comrades Core' },
+  { src: 'Rana6.jpg',   category: 'group', title: 'Emerson Courtyard' },
+  { src: 'Rana7.jpg',   category: 'group', title: 'Group Vibes' },
+  { src: 'Rana8.jpg',   category: 'group', title: 'Classmates' },
+  { src: 'Rana9.jpg',   category: 'group', title: 'Campus Stroll' },
+  { src: 'Rana11.jpg',  category: 'group', title: 'Comrades Gathering' },
+  { src: 'Rana12.jpg',  category: 'group', title: 'Afternoon Chat' },
+  { src: 'Rana14.jpg',  category: 'group', title: 'University Life' },
+  { src: 'Rana16.jpg',  category: 'group', title: 'Group Portrait' },
+  { src: 'Rana17.jpg',  category: 'group', title: 'Study Session Break' },
+  { src: 'Rana18.jpg',  category: 'group', title: 'Comrades Smile' },
+  { src: 'Rana19.jpg',  category: 'group', title: 'Outdoor Gathering' },
+  { src: 'Rana20.jpg',  category: 'group', title: 'Lawn Discussion' },
+  { src: 'Rana21.jpg',  category: 'group', title: 'Academic Life' },
+  { src: 'Rana22.jpg',  category: 'group', title: 'Cyber Security Unit' },
+  { src: 'Rana23.jpg',  category: 'group', title: 'Laughter & Memories' },
+  { src: 'Rana24.jpg',  category: 'group', title: 'Group Photo' },
+  { src: 'Rana25.jpg',  category: 'group', title: 'Afternoon Group' },
+  { src: 'Rana26.jpg',  category: 'group', title: 'Sunny Day Gathering' },
+  { src: 'Rana29.jpg',  category: 'group', title: 'Campus Walkway' },
+  { src: 'Rana30.jpg',  category: 'group', title: 'Group Memory' },
+  { src: 'Rana34.jpg',  category: 'group', title: 'Emerson Comrades' },
+  { src: 'Rana36.jpg',  category: 'group', title: 'Main Campus Gate' },
+  { src: 'Rana39.jpg',  category: 'group', title: 'Under the Tree' },
+  { src: 'Rana40.jpg',  category: 'group', title: 'Casual Talk' },
+  { src: 'Rana41.jpg',  category: 'group', title: 'University Friends' },
+  { src: 'Rana42.jpeg', category: 'group', title: 'Comrades Lineup' },
+  { src: 'Rana43.jpg',  category: 'group', title: 'Campus Lawn' },
+  { src: 'Rana44.jpeg', category: 'group', title: 'Cyber Group' },
+  { src: 'Rana45.jpg',  category: 'group', title: 'Shaded Bench' },
+  { src: 'Rana46.jpg',  category: 'group', title: 'Gathering Photo' },
+  { src: 'Rana47.jpg',  category: 'group', title: 'Classmates Bond' },
+  { src: 'Rana48.jpg',  category: 'group', title: 'Group Pose' },
+  { src: 'Rana49.jpg',  category: 'group', title: 'Comrades Day' },
+  { src: 'Rana50.jpg',  category: 'group', title: 'Campus Steps' },
+  { src: 'Rana52.jpg',  category: 'group', title: 'Lawn Portrait' },
+  { src: 'Rana54.jpg',  category: 'group', title: 'Group Together' },
+  { src: 'Rana57.jpg',  category: 'group', title: 'Campus Portrait' },
+
+  // ── EVENTS / MEMORIES ────────────────────────────────────────────────────
   { src: 'Rana10.jpg',  category: 'events', title: 'University Event' },
   { src: 'Rana13.jpeg', category: 'events', title: 'Department Presentation' },
   { src: 'Rana15.jpg',  category: 'events', title: 'Special Ceremony' },
@@ -134,68 +190,138 @@ const albumPhotos = [
   { src: 'Rana35.jpeg', category: 'events', title: 'Special Memory' },
   { src: 'Rana37.jpeg', category: 'events', title: 'Campus Day' },
   { src: 'Rana38.jpg',  category: 'events', title: 'Comrades Circle' },
-  { src: 'Rana55.jpg',  category: 'events', title: 'Emerson Sports Day' },
-  { src: 'Rana56.jpeg', category: 'events', title: 'Sports Event Group' },
-  { src: 'Rana58.jpg',  category: 'events', title: 'Official Celebration' },
-  { src: 'Rana59.jpeg', category: 'events', title: 'Special Gathering' },
-  { src: 'Rana60.jpeg', category: 'events', title: 'Campus Memories' },
-  { src: 'Rana61.jpeg', category: 'events', title: 'Comrades Event' },
-  { src: 'Rana62.jpg',  category: 'events', title: 'Tech Talk Gathering' },
-  { src: 'Rana63.jpg',  category: 'events', title: 'Class Presentation Day' },
-  { src: 'Rana64.jpeg', category: 'events', title: 'Special Occasion' },
-  { src: 'Rana65.jpeg', category: 'events', title: 'Annual Celebration' },
-  { src: 'Rana66.jpg',  category: 'events', title: 'Annual Dinner' },
-  { src: 'Rana67.jpg',  category: 'events', title: 'Department Meetup' },
-  { src: 'Rana68.jpg',  category: 'events', title: 'Farewell Gathering' },
-  { src: 'Rana69.jpeg', category: 'events', title: 'Computing Lab Event' },
-  { src: 'Rana70.jpeg', category: 'events', title: 'Campus Event' },
-  { src: 'Rana71.jpeg', category: 'events', title: 'Group Moment' },
-  { src: 'Rana72.jpeg', category: 'events', title: 'Comrades Reunion' },
-  { src: 'Rana73.jpg',  category: 'events', title: 'University Life' },
-  { src: 'Rana74.jpg',  category: 'events', title: 'Outdoor Event' },
-  { src: 'Rana75.jpeg', category: 'events', title: 'Campus Walk' },
-  { src: 'Rana76.jpeg', category: 'events', title: 'Comrades Moment' },
+  { src: 'Rana51.jpeg', category: 'events', title: 'Emerson Sports Day' },
+  { src: 'Rana53.jpeg', category: 'events', title: 'Sports Event Group' },
+  { src: 'Rana55.jpg',  category: 'events', title: 'Official Celebration' },
+  { src: 'Rana56.jpeg', category: 'events', title: 'Special Gathering' },
+  { src: 'Rana58.jpg',  category: 'events', title: 'Campus Memories' },
+  { src: 'Rana59.jpeg', category: 'events', title: 'Comrades Event' },
+  { src: 'Rana60.jpeg', category: 'events', title: 'Tech Talk Gathering' },
+  { src: 'Rana61.jpeg', category: 'events', title: 'Class Presentation Day' },
+  { src: 'Rana62.jpg',  category: 'events', title: 'Special Occasion' },
+  { src: 'Rana63.jpg',  category: 'events', title: 'Annual Celebration' },
+  { src: 'Rana64.jpeg', category: 'events', title: 'Annual Dinner' },
+  { src: 'Rana65.jpeg', category: 'events', title: 'Department Meetup' },
+  { src: 'Rana66.jpg',  category: 'events', title: 'Farewell Gathering' },
+  { src: 'Rana67.jpg',  category: 'events', title: 'Computing Lab Event' },
+  { src: 'Rana68.jpg',  category: 'events', title: 'Campus Event' },
+  { src: 'Rana69.jpeg', category: 'events', title: 'Group Moment' },
+  { src: 'Rana70.jpeg', category: 'events', title: 'Comrades Reunion' },
+  { src: 'Rana71.jpeg', category: 'events', title: 'University Life' },
+  { src: 'Rana72.jpeg', category: 'events', title: 'Outdoor Event' },
+  { src: 'Rana73.jpg',  category: 'events', title: 'Campus Walk' },
+  { src: 'Rana74.jpg',  category: 'events', title: 'Comrades Moment' },
+  { src: 'Rana75.jpeg', category: 'events', title: 'Campus Memory' },
+  { src: 'Rana76.jpeg', category: 'events', title: 'Brotherhood Day' },
 
-  // Individual Members
-  { src: 'Arif1.jpg',        category: 'individual', title: 'Muhammad Arif' },
-  { src: 'Arif2.jpg',        category: 'individual', title: 'Muhammad Arif' },
-  { src: 'Arif3.jpg',        category: 'individual', title: 'Muhammad Arif' },
-  { src: 'Arif4.jpg',        category: 'individual', title: 'Muhammad Arif' },
-  { src: 'Arif5.jpg',        category: 'individual', title: 'Muhammad Arif' },
-  { src: 'Arif7.jpg',        category: 'individual', title: 'Muhammad Arif' },
-  { src: 'Arif10.jpeg',      category: 'individual', title: 'Muhammad Arif' },
-  { src: 'Arif11.jpeg',      category: 'individual', title: 'Muhammad Arif' },
-  { src: 'Arif12.jpeg',      category: 'individual', title: 'Muhammad Arif' },
-  { src: 'Aurangzaib1.jpeg', category: 'individual', title: 'Aurangzaib' },
-  { src: 'Aurangzaib2.jpg',  category: 'individual', title: 'Aurangzaib' },
-  { src: 'Aurangzaib4.jpg',  category: 'individual', title: 'Aurangzaib' },
-  { src: 'Aurangzaib5.jpg',  category: 'individual', title: 'Aurangzaib' },
-  { src: 'Basit1.jpg',       category: 'individual', title: 'Muhammad Basit' },
-  { src: 'Basit2.jpg',       category: 'individual', title: 'Muhammad Basit' },
-  { src: 'Basit3.jpg',       category: 'individual', title: 'Muhammad Basit' },
-  { src: 'Basit4.jpg',       category: 'individual', title: 'Muhammad Basit' },
-  { src: 'Zahid1.jpeg',      category: 'individual', title: 'Muhammad Zahid' },
-  { src: 'Zahid2.jpg',       category: 'individual', title: 'Muhammad Zahid' },
-  { src: 'Zahid3.jpg',       category: 'individual', title: 'Muhammad Zahid' },
-  { src: 'Zahid4.jpg',       category: 'individual', title: 'Muhammad Zahid' },
-  { src: 'Zahid5.jpg',       category: 'individual', title: 'Muhammad Zahid' },
-  { src: 'Zahid6.jpg',       category: 'individual', title: 'Muhammad Zahid' },
-  { src: 'Zahid7.jpg',       category: 'individual', title: 'Muhammad Zahid' },
-  { src: 'Zahid8.jpg',       category: 'individual', title: 'Muhammad Zahid' },
-  { src: 'Javed1.jpeg',      category: 'individual', title: 'Javed Iqbal' },
-  { src: 'Javed2.jpeg',      category: 'individual', title: 'Javed Iqbal' },
-  { src: 'Javed3.jpeg',      category: 'individual', title: 'Javed Iqbal' },
-  { src: 'Javed4.jpeg',      category: 'individual', title: 'Javed Iqbal' },
-  { src: 'Javed5.jpeg',      category: 'individual', title: 'Javed Iqbal' },
-  { src: 'Saad1.jpeg',       category: 'individual', title: 'Saad Habib' },
-  { src: 'Saad2.jpeg',       category: 'individual', title: 'Saad Habib' },
-  { src: 'Saad3.jpeg',       category: 'individual', title: 'Saad Habib' },
-  { src: 'Mursaleen1.jpeg',  category: 'individual', title: 'Muhammad Mursaleen' },
-  { src: 'Mursaleen2.jpeg',  category: 'individual', title: 'Muhammad Mursaleen' },
-  { src: 'Hanan1.jpeg',      category: 'individual', title: 'Hanan Haider' },
-  { src: 'Hanan2.jpeg',      category: 'individual', title: 'Hanan Haider' },
-  { src: 'Faizan1.jpeg',     category: 'individual', title: 'Faizan Ali Chohan' },
-  { src: 'Faizan2.jpeg',     category: 'individual', title: 'Faizan Ali Chohan' }
+  // ── INDIVIDUAL MEMBERS ────────────────────────────────────────────────────
+  // Muhammad Arif — 12 photos (Arif1-5.jpg, Arif6.jpeg, Arif7.jpg, Arif8-12.jpeg)
+  { src: 'Arif1.jpg',   category: 'individual', title: 'Muhammad Arif' },
+  { src: 'Arif2.jpg',   category: 'individual', title: 'Muhammad Arif' },
+  { src: 'Arif3.jpg',   category: 'individual', title: 'Muhammad Arif' },
+  { src: 'Arif4.jpg',   category: 'individual', title: 'Muhammad Arif' },
+  { src: 'Arif5.jpg',   category: 'individual', title: 'Muhammad Arif' },
+  { src: 'Arif6.jpeg',  category: 'individual', title: 'Muhammad Arif' },
+  { src: 'Arif7.jpg',   category: 'individual', title: 'Muhammad Arif' },
+  { src: 'Arif8.jpeg',  category: 'individual', title: 'Muhammad Arif' },
+  { src: 'Arif9.jpeg',  category: 'individual', title: 'Muhammad Arif' },
+  { src: 'Arif10.jpeg', category: 'individual', title: 'Muhammad Arif' },
+  { src: 'Arif11.jpeg', category: 'individual', title: 'Muhammad Arif' },
+  { src: 'Arif12.jpeg', category: 'individual', title: 'Muhammad Arif' },
+
+  // Aurangzaib — 9 photos (no Aurangzaib3 in folder)
+  { src: 'Aurangzaib1.jpeg',  category: 'individual', title: 'Aurangzaib' },
+  { src: 'Aurangzaib2.jpg',   category: 'individual', title: 'Aurangzaib' },
+  { src: 'Aurangzaib4.jpg',   category: 'individual', title: 'Aurangzaib' },
+  { src: 'Aurangzaib5.jpg',   category: 'individual', title: 'Aurangzaib' },
+  { src: 'Aurangzaib6.jpg',   category: 'individual', title: 'Aurangzaib' },
+  { src: 'Aurangzaib7.jpeg',  category: 'individual', title: 'Aurangzaib' },
+  { src: 'Aurangzaib8.jpeg',  category: 'individual', title: 'Aurangzaib' },
+  { src: 'Aurangzaib9.jpeg',  category: 'individual', title: 'Aurangzaib' },
+  { src: 'Aurangzaib10.jpeg', category: 'individual', title: 'Aurangzaib' },
+
+  // Muhammad Basit — 40 photos (Basit1-4.jpg, Basit5-40.jpeg)
+  { src: 'Basit1.jpg',   category: 'individual', title: 'Muhammad Basit' },
+  { src: 'Basit2.jpg',   category: 'individual', title: 'Muhammad Basit' },
+  { src: 'Basit3.jpg',   category: 'individual', title: 'Muhammad Basit' },
+  { src: 'Basit4.jpg',   category: 'individual', title: 'Muhammad Basit' },
+  { src: 'Basit5.jpeg',  category: 'individual', title: 'Muhammad Basit' },
+  { src: 'Basit6.jpeg',  category: 'individual', title: 'Muhammad Basit' },
+  { src: 'Basit7.jpeg',  category: 'individual', title: 'Muhammad Basit' },
+  { src: 'Basit8.jpeg',  category: 'individual', title: 'Muhammad Basit' },
+  { src: 'Basit9.jpeg',  category: 'individual', title: 'Muhammad Basit' },
+  { src: 'Basit10.jpeg', category: 'individual', title: 'Muhammad Basit' },
+  { src: 'Basit11.jpeg', category: 'individual', title: 'Muhammad Basit' },
+  { src: 'Basit12.jpeg', category: 'individual', title: 'Muhammad Basit' },
+  { src: 'Basit13.jpeg', category: 'individual', title: 'Muhammad Basit' },
+  { src: 'Basit14.jpeg', category: 'individual', title: 'Muhammad Basit' },
+  { src: 'Basit15.jpeg', category: 'individual', title: 'Muhammad Basit' },
+  { src: 'Basit16.jpeg', category: 'individual', title: 'Muhammad Basit' },
+  { src: 'Basit17.jpeg', category: 'individual', title: 'Muhammad Basit' },
+  { src: 'Basit18.jpeg', category: 'individual', title: 'Muhammad Basit' },
+  { src: 'Basit19.jpeg', category: 'individual', title: 'Muhammad Basit' },
+  { src: 'Basit20.jpeg', category: 'individual', title: 'Muhammad Basit' },
+  { src: 'Basit21.jpeg', category: 'individual', title: 'Muhammad Basit' },
+  { src: 'Basit22.jpeg', category: 'individual', title: 'Muhammad Basit' },
+  { src: 'Basit23.jpeg', category: 'individual', title: 'Muhammad Basit' },
+  { src: 'Basit24.jpeg', category: 'individual', title: 'Muhammad Basit' },
+  { src: 'Basit25.jpeg', category: 'individual', title: 'Muhammad Basit' },
+  { src: 'Basit26.jpeg', category: 'individual', title: 'Muhammad Basit' },
+  { src: 'Basit27.jpeg', category: 'individual', title: 'Muhammad Basit' },
+  { src: 'Basit28.jpeg', category: 'individual', title: 'Muhammad Basit' },
+  { src: 'Basit29.jpeg', category: 'individual', title: 'Muhammad Basit' },
+  { src: 'Basit30.jpeg', category: 'individual', title: 'Muhammad Basit' },
+  { src: 'Basit31.jpeg', category: 'individual', title: 'Muhammad Basit' },
+  { src: 'Basit32.jpeg', category: 'individual', title: 'Muhammad Basit' },
+  { src: 'Basit33.jpeg', category: 'individual', title: 'Muhammad Basit' },
+  { src: 'Basit34.jpeg', category: 'individual', title: 'Muhammad Basit' },
+  { src: 'Basit35.jpeg', category: 'individual', title: 'Muhammad Basit' },
+  { src: 'Basit36.jpeg', category: 'individual', title: 'Muhammad Basit' },
+  { src: 'Basit37.jpeg', category: 'individual', title: 'Muhammad Basit' },
+  { src: 'Basit38.jpeg', category: 'individual', title: 'Muhammad Basit' },
+  { src: 'Basit39.jpeg', category: 'individual', title: 'Muhammad Basit' },
+  { src: 'Basit40.jpeg', category: 'individual', title: 'Muhammad Basit' },
+
+  // Muhammad Zahid — 8 photos (Zahid1.jpeg, Zahid2-8.jpg)
+  { src: 'Zahid1.jpeg', category: 'individual', title: 'Muhammad Zahid' },
+  { src: 'Zahid2.jpg',  category: 'individual', title: 'Muhammad Zahid' },
+  { src: 'Zahid3.jpg',  category: 'individual', title: 'Muhammad Zahid' },
+  { src: 'Zahid4.jpg',  category: 'individual', title: 'Muhammad Zahid' },
+  { src: 'Zahid5.jpg',  category: 'individual', title: 'Muhammad Zahid' },
+  { src: 'Zahid6.jpg',  category: 'individual', title: 'Muhammad Zahid' },
+  { src: 'Zahid7.jpg',  category: 'individual', title: 'Muhammad Zahid' },
+  { src: 'Zahid8.jpg',  category: 'individual', title: 'Muhammad Zahid' },
+
+  // Javed Iqbal — 10 photos (all .jpeg)
+  { src: 'Javed1.jpeg',  category: 'individual', title: 'Javed Iqbal' },
+  { src: 'Javed2.jpeg',  category: 'individual', title: 'Javed Iqbal' },
+  { src: 'Javed3.jpeg',  category: 'individual', title: 'Javed Iqbal' },
+  { src: 'Javed4.jpeg',  category: 'individual', title: 'Javed Iqbal' },
+  { src: 'Javed5.jpeg',  category: 'individual', title: 'Javed Iqbal' },
+  { src: 'Javed6.jpeg',  category: 'individual', title: 'Javed Iqbal' },
+  { src: 'Javed7.jpeg',  category: 'individual', title: 'Javed Iqbal' },
+  { src: 'Javed8.jpeg',  category: 'individual', title: 'Javed Iqbal' },
+  { src: 'Javed9.jpeg',  category: 'individual', title: 'Javed Iqbal' },
+  { src: 'Javed10.jpeg', category: 'individual', title: 'Javed Iqbal' },
+
+  // Saad Habib — 5 photos (all .jpeg)
+  { src: 'Saad1.jpeg', category: 'individual', title: 'Saad Habib' },
+  { src: 'Saad2.jpeg', category: 'individual', title: 'Saad Habib' },
+  { src: 'Saad3.jpeg', category: 'individual', title: 'Saad Habib' },
+  { src: 'Saad4.jpeg', category: 'individual', title: 'Saad Habib' },
+  { src: 'Saad5.jpeg', category: 'individual', title: 'Saad Habib' },
+
+  // Muhammad Mursaleen — 2 photos
+  { src: 'Mursaleen1.jpeg', category: 'individual', title: 'Muhammad Mursaleen' },
+  { src: 'Mursaleen2.jpeg', category: 'individual', title: 'Muhammad Mursaleen' },
+
+  // Hanan Haider — 2 photos
+  { src: 'Hanan1.jpeg', category: 'individual', title: 'Hanan Haider' },
+  { src: 'Hanan2.jpeg', category: 'individual', title: 'Hanan Haider' },
+
+  // Faizan Ali Chohan — 2 photos
+  { src: 'Faizan1.jpeg', category: 'individual', title: 'Faizan Ali Chohan' },
+  { src: 'Faizan2.jpeg', category: 'individual', title: 'Faizan Ali Chohan' }
 ];
 
 /**
@@ -457,17 +583,17 @@ let filteredPhotosList = [];
 // Lazy loading via IntersectionObserver for album grid
 const imageObserver = typeof IntersectionObserver !== 'undefined'
   ? new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const img = entry.target;
-          if (img.dataset.src) {
-            img.src = img.dataset.src;
-            img.removeAttribute('data-src');
-            imageObserver.unobserve(img);
-          }
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const img = entry.target;
+        if (img.dataset.src) {
+          img.src = img.dataset.src;
+          img.removeAttribute('data-src');
+          imageObserver.unobserve(img);
         }
-      });
-    }, { rootMargin: '200px 0px' })
+      }
+    });
+  }, { rootMargin: '200px 0px' })
   : null;
 
 function renderGroupAlbum(filterCategory = 'all') {
@@ -556,10 +682,10 @@ let currentPreviewIndex = 0;
 let previewModal, previewImage, previewVideo, modalCounter;
 
 function initPreviewElements() {
-  previewModal   = document.getElementById('previewModal');
-  previewImage   = document.getElementById('previewImage');
-  previewVideo   = document.getElementById('previewVideo');
-  modalCounter   = document.getElementById('modalCounter');
+  previewModal = document.getElementById('previewModal');
+  previewImage = document.getElementById('previewImage');
+  previewVideo = document.getElementById('previewVideo');
+  modalCounter = document.getElementById('modalCounter');
 }
 
 function openPreviewFromList(list, index) {
@@ -585,7 +711,7 @@ function showPreviewItem() {
     if (previewVideo) {
       previewVideo.src = src;
       previewVideo.style.display = 'block';
-      previewVideo.play().catch(() => {});
+      previewVideo.play().catch(() => { });
     }
     if (previewImage) previewImage.style.display = 'none';
   } else {
@@ -686,7 +812,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Mobile Nav Toggle
   const navToggle = document.getElementById('navToggle');
-  const navLinks  = document.getElementById('navLinks');
+  const navLinks = document.getElementById('navLinks');
 
   if (navToggle && navLinks) {
     navToggle.addEventListener('click', () => {
@@ -742,14 +868,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Close Mobile Nav Helper
 window.closeNav = function () {
-  const navLinks  = document.getElementById('navLinks');
+  const navLinks = document.getElementById('navLinks');
   const navToggle = document.getElementById('navToggle');
-  if (navLinks)  navLinks.classList.remove('open');
+  if (navLinks) navLinks.classList.remove('open');
   if (navToggle) navToggle.classList.remove('active');
 };
 
 // Bind Modal controls to window
-window.closeMemberModal    = closeMemberModal;
+window.closeMemberModal = closeMemberModal;
 window.navigateMemberSlider = navigateMemberSlider;
 
 /**
@@ -786,7 +912,7 @@ function initParticleCanvas() {
   let animationId;
 
   function resizeCanvas() {
-    canvas.width  = window.innerWidth;
+    canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
   }
 
@@ -799,18 +925,18 @@ function initParticleCanvas() {
     }
 
     reset() {
-      this.x       = Math.random() * canvas.width;
-      this.y       = Math.random() * canvas.height;
-      this.vx      = (Math.random() - 0.5) * 0.45;
-      this.vy      = (Math.random() - 0.5) * 0.45;
-      this.radius  = Math.random() * 2 + 0.6;
+      this.x = Math.random() * canvas.width;
+      this.y = Math.random() * canvas.height;
+      this.vx = (Math.random() - 0.5) * 0.45;
+      this.vy = (Math.random() - 0.5) * 0.45;
+      this.radius = Math.random() * 2 + 0.6;
       this.opacity = Math.random() * 0.35 + 0.15;
     }
 
     update() {
       this.x += this.vx;
       this.y += this.vy;
-      if (this.x < 0 || this.x > canvas.width)  this.vx *= -1;
+      if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
       if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
     }
 
@@ -837,14 +963,14 @@ function initParticleCanvas() {
     // Draw connecting lines between close particles
     for (let i = 0; i < particles.length; i++) {
       for (let j = i + 1; j < particles.length; j++) {
-        const dx   = particles[i].x - particles[j].x;
-        const dy   = particles[i].y - particles[j].y;
+        const dx = particles[i].x - particles[j].x;
+        const dy = particles[i].y - particles[j].y;
         const dist = Math.sqrt(dx * dx + dy * dy);
 
         if (dist < 115) {
           ctx.beginPath();
           ctx.strokeStyle = `rgba(212, 175, 55, ${0.09 * (1 - dist / 115)})`;
-          ctx.lineWidth   = 0.5;
+          ctx.lineWidth = 0.5;
           ctx.moveTo(particles[i].x, particles[i].y);
           ctx.lineTo(particles[j].x, particles[j].y);
           ctx.stroke();
