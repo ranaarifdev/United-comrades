@@ -5,7 +5,7 @@
  * 1. DATA-DRIVEN ARCHITECTURE
  * ALL image filenames verified exactly against /images folder.
  * GitHub Pages = Linux = case-sensitive. Every name must match perfectly.
- *
+ 
  * Verified folder contents (176 files):
  *   Arif1.jpg  Arif2.jpg  Arif3.jpg  Arif4.jpg  Arif5.jpg  Arif6.jpeg
  *   Arif7.jpg  Arif8.jpeg Arif9.jpeg Arif10.jpeg Arif11.jpeg Arif12.jpeg
