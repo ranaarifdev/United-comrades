@@ -50,7 +50,7 @@ const members = [
     ]
   },
   {
-    name: "Hanan Haider",
+    name: "M-Hanan Haider",
     role: "Event Manager",
     description: "Cyber Security Student at Emerson University Multan. Passionate about ethical hacking, network analysis, and securing digital infrastructure. Certified SEO and Web Developer.",
     belongsTo: "Kot Addu",
@@ -117,7 +117,7 @@ const members = [
     name: "Saad Habib",
     role: "Social Media Coordinator",
     description: "Cyber Security Student. Interested in social engineering prevention, security audits, and risk assessment strategies.",
-    belongsTo: "Multan",
+    belongsTo: "Kot Addu",
     images: ["Saad1.jpeg", "Saad2.jpeg", "Saad3.jpeg", "Saad4.jpeg", "Saad5.jpeg"]
   },
   {
